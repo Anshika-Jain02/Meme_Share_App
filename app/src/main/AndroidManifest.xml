@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.memes">
+
+    <!--each module has its manifest file where information like every permission allowed for that app, what will be its name,icon,theme,will it backup or not and etc is declared-->
+
+    <uses-permission android:name="android.permission.INTERNET"/> <!--states that our app has or will use the permission to access internet/network from now onwards-->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Memes"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" /> <!--stating that mainActivity is a launcher activity that launches itself and all other activities-->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
